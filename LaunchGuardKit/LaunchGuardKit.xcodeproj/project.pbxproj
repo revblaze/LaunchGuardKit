@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C22C4A282954CC93000EEFDD /* LaunchGuard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22C4A272954CC93000EEFDD /* LaunchGuard.swift */; };
 		C2664DAF2954CB2C00FAA75C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2664DAE2954CB2C00FAA75C /* AppDelegate.swift */; };
 		C2664DB12954CB2C00FAA75C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2664DB02954CB2C00FAA75C /* ViewController.swift */; };
 		C2664DB32954CB2D00FAA75C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2664DB22954CB2D00FAA75C /* Assets.xcassets */; };
@@ -14,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C22C4A272954CC93000EEFDD /* LaunchGuard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchGuard.swift; sourceTree = "<group>"; };
 		C2664DAB2954CB2C00FAA75C /* LaunchGuardKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LaunchGuardKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2664DAE2954CB2C00FAA75C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C2664DB02954CB2C00FAA75C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -33,6 +35,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C22C4A262954CC3A000EEFDD /* LGKit */ = {
+			isa = PBXGroup;
+			children = (
+				C22C4A272954CC93000EEFDD /* LaunchGuard.swift */,
+			);
+			path = LGKit;
+			sourceTree = "<group>";
+		};
 		C2664DA22954CB2B00FAA75C = {
 			isa = PBXGroup;
 			children = (
@@ -52,6 +62,7 @@
 		C2664DAD2954CB2C00FAA75C /* LaunchGuardKit */ = {
 			isa = PBXGroup;
 			children = (
+				C22C4A262954CC3A000EEFDD /* LGKit */,
 				C2664DAE2954CB2C00FAA75C /* AppDelegate.swift */,
 				C2664DB02954CB2C00FAA75C /* ViewController.swift */,
 				C2664DB22954CB2D00FAA75C /* Assets.xcassets */,
@@ -133,6 +144,7 @@
 			files = (
 				C2664DB12954CB2C00FAA75C /* ViewController.swift in Sources */,
 				C2664DAF2954CB2C00FAA75C /* AppDelegate.swift in Sources */,
+				C22C4A282954CC93000EEFDD /* LaunchGuard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
