@@ -7,6 +7,8 @@ Drag and drop `/LaunchGuardKit` into your project
 
 ## Getting Started
 
+While you can use the app's localized name to interact with it, it's recommended that you mostly work with the bundle identifier instead. There are multiple benefits to this; the most important being that the `bundleId` is more unique and unlikely to change.
+
 ```swift
 let launchGuard = LaunchGuard.shared
 
