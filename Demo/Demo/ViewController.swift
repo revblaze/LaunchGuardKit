@@ -15,7 +15,10 @@ class ViewController: NSViewController {
     super.viewDidLoad()
 
     let blocklist = ["com.apple.Music"]
-    launchGuard.
+    launchGuard.add(blocklist: blocklist)
+    
+    let runningApps = launchGuard.apps()
+    print(runningApps)
   }
 
   
