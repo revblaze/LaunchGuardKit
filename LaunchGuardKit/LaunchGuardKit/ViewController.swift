@@ -18,7 +18,7 @@ class ViewController: NSViewController {
     LaunchGuard.debug = true
     
     let blocklist = ["org.m0k.transmission"]
-    launchGuard.addBlocklist(blocklist)
+    launchGuard.add(blocklist: blocklist)
   }
 
 

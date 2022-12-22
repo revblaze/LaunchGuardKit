@@ -23,20 +23,25 @@ extension LaunchGuard {
     }
   }
   
-  public func addBlocklist(_ bundleIds: [String]) {
+  public func add(blocklist: [String], format: Format = .bundleId) {
+    switch format {
+    case .bundleId: addBlocklist(bundleIds: blocklist)
+    case .name: addBlocklist(appNames: blocklist)
+    }
+    // Block currently running apps
+    filterBlocklist()
+  }
+  
+  fileprivate func addBlocklist(bundleIds: [String]) {
     for bundleId in bundleIds {
       Blocklist.bundleIds.append(bundleId)
     }
-    // check currently running apps too
-    commandAll(.forceQuit, bundleIds: bundleIds)
   }
   
-  public func addBlocklist(appNames: [String]) {
+  fileprivate func addBlocklist(appNames: [String]) {
     for name in appNames {
       Blocklist.appNames.append(name)
     }
-    // check currently running apps too
-    commandAll(.forceQuit, appNames: appNames)
   }
   
   public func clearBlocklist() {
