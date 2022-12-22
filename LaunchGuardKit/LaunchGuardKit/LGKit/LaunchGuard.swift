@@ -21,7 +21,7 @@ open class LaunchGuard: NSObject {
     super.init()
     // notifs & other post-init
     notificationCenter.addObserver(self,
-                                   selector: #selector(self.newRunningAppDidLaunch(_:)),
+                                   selector: #selector(self.newRunningApplicationDidLaunch(_:)),
                                    name: NSWorkspace.didLaunchApplicationNotification,
                                    object: nil)
   }
@@ -30,7 +30,7 @@ open class LaunchGuard: NSObject {
 
 extension LaunchGuard {
   
-  @objc func newRunningAppDidLaunch(_ notification: Notification) {
+  @objc func newRunningApplicationDidLaunch(_ notification: Notification) {
     print("New Launch: \(recentlyLaunched())")
   }
   
