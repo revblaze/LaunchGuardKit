@@ -31,6 +31,14 @@ extension LaunchGuard {
     commandAll(.forceQuit, bundleIds: bundleIds)
   }
   
+  public func addBlocklist(appNames: [String]) {
+    for name in appNames {
+      Blocklist.appNames.append(name)
+    }
+    // check currently running apps too
+    commandAll(.forceQuit, appNames: appNames)
+  }
+  
   public func clearBlocklist() {
     Blocklist.appNames = []
     Blocklist.bundleIds = []
