@@ -8,11 +8,13 @@
 import Cocoa
 
 class ViewController: NSViewController {
-
+  
+  let launchGuard = LaunchGuard.shared
+  
   override func viewDidLoad() {
     super.viewDidLoad()
 
-    // Do any additional setup after loading the view.
+    print(launchGuard.runningBundleIds())
   }
 
   override var representedObject: Any? {
