@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		C22C4A282954CC93000EEFDD /* LaunchGuard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22C4A272954CC93000EEFDD /* LaunchGuard.swift */; };
+		C22C4A2A2954F5EA000EEFDD /* LaunchGuard+Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22C4A292954F5EA000EEFDD /* LaunchGuard+Command.swift */; };
+		C22C4A2C2954F688000EEFDD /* LaunchGuard+Blocklist.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22C4A2B2954F688000EEFDD /* LaunchGuard+Blocklist.swift */; };
+		C22C4A2E2954FB19000EEFDD /* LaunchGuard+Debug.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22C4A2D2954FB19000EEFDD /* LaunchGuard+Debug.swift */; };
+		C22C4A3029550E79000EEFDD /* LaunchGuard+Apps.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22C4A2F29550E79000EEFDD /* LaunchGuard+Apps.swift */; };
 		C2664DAF2954CB2C00FAA75C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2664DAE2954CB2C00FAA75C /* AppDelegate.swift */; };
 		C2664DB12954CB2C00FAA75C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2664DB02954CB2C00FAA75C /* ViewController.swift */; };
 		C2664DB32954CB2D00FAA75C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2664DB22954CB2D00FAA75C /* Assets.xcassets */; };
@@ -16,6 +20,10 @@
 
 /* Begin PBXFileReference section */
 		C22C4A272954CC93000EEFDD /* LaunchGuard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchGuard.swift; sourceTree = "<group>"; };
+		C22C4A292954F5EA000EEFDD /* LaunchGuard+Command.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LaunchGuard+Command.swift"; sourceTree = "<group>"; };
+		C22C4A2B2954F688000EEFDD /* LaunchGuard+Blocklist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LaunchGuard+Blocklist.swift"; sourceTree = "<group>"; };
+		C22C4A2D2954FB19000EEFDD /* LaunchGuard+Debug.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LaunchGuard+Debug.swift"; sourceTree = "<group>"; };
+		C22C4A2F29550E79000EEFDD /* LaunchGuard+Apps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LaunchGuard+Apps.swift"; sourceTree = "<group>"; };
 		C2664DAB2954CB2C00FAA75C /* LaunchGuardKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LaunchGuardKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2664DAE2954CB2C00FAA75C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C2664DB02954CB2C00FAA75C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -35,12 +43,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		C22C4A262954CC3A000EEFDD /* LGKit */ = {
+		C22C4A262954CC3A000EEFDD /* LaunchGuardKit */ = {
 			isa = PBXGroup;
 			children = (
 				C22C4A272954CC93000EEFDD /* LaunchGuard.swift */,
+				C22C4A2F29550E79000EEFDD /* LaunchGuard+Apps.swift */,
+				C22C4A2B2954F688000EEFDD /* LaunchGuard+Blocklist.swift */,
+				C22C4A292954F5EA000EEFDD /* LaunchGuard+Command.swift */,
+				C22C4A2D2954FB19000EEFDD /* LaunchGuard+Debug.swift */,
 			);
-			path = LGKit;
+			path = LaunchGuardKit;
 			sourceTree = "<group>";
 		};
 		C2664DA22954CB2B00FAA75C = {
@@ -62,7 +74,7 @@
 		C2664DAD2954CB2C00FAA75C /* LaunchGuardKit */ = {
 			isa = PBXGroup;
 			children = (
-				C22C4A262954CC3A000EEFDD /* LGKit */,
+				C22C4A262954CC3A000EEFDD /* LaunchGuardKit */,
 				C2664DAE2954CB2C00FAA75C /* AppDelegate.swift */,
 				C2664DB02954CB2C00FAA75C /* ViewController.swift */,
 				C2664DB22954CB2D00FAA75C /* Assets.xcassets */,
@@ -142,8 +154,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C22C4A2C2954F688000EEFDD /* LaunchGuard+Blocklist.swift in Sources */,
+				C22C4A2A2954F5EA000EEFDD /* LaunchGuard+Command.swift in Sources */,
+				C22C4A2E2954FB19000EEFDD /* LaunchGuard+Debug.swift in Sources */,
 				C2664DB12954CB2C00FAA75C /* ViewController.swift in Sources */,
 				C2664DAF2954CB2C00FAA75C /* AppDelegate.swift in Sources */,
+				C22C4A3029550E79000EEFDD /* LaunchGuard+Apps.swift in Sources */,
 				C22C4A282954CC93000EEFDD /* LaunchGuard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
