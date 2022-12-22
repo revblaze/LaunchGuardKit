@@ -3,7 +3,7 @@ An open source development kit for the components featured in LaunchGuard for ma
 
 ## Setup
 
-Drag and drop `/LaunchGuardKit` into your project
+Drag and drop `/LaunchGuardKit` into your project.
 
 ## Getting Started
 
@@ -33,7 +33,7 @@ let list = ["com.apple.Music", "com.github.GitHubClient"]
 launchGuard.add(blocklist: list)
 
 // By app name
-let list = ["Music", "GitHub Client"]
+let list = ["Music", "GitHub Desktop"]
 launchGuard.add(blocklist: list, format: .name)
 ```
 
