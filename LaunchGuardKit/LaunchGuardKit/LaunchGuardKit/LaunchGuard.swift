@@ -11,6 +11,8 @@ open class LaunchGuard: NSObject {
   
   static let shared = LaunchGuard()
   
+  static var debug = false
+  
   fileprivate let workspace = NSWorkspace.shared
   fileprivate let notificationCenter = NSWorkspace.shared.notificationCenter
   
@@ -31,8 +33,19 @@ open class LaunchGuard: NSObject {
 extension LaunchGuard {
   
   @objc func newRunningApplicationDidLaunch(_ notification: Notification) {
-    print("New Launch: \(recentlyLaunched())")
+    let app: NSRunningApplication = notification.userInfo![NSWorkspace.applicationUserInfoKey] as! NSRunningApplication
+    if let name = app.localizedName {
+      if let bundleId = app.bundleIdentifier {
+        // Do something
+        Debug.log("[LAUNCH] \(name) [\(bundleId)]")
+      }
+    }
+    filterBlocklist()
   }
+  
+  
+  
+  // MARK: - Utility
   
   public func runningApplications() -> [NSRunningApplication] {
     return workspace.runningApplications
@@ -58,6 +71,26 @@ extension LaunchGuard {
     return ids
   }
   
+  public func runningAppNamesAndBundleIds() -> [String] {
+    var ids: [String] = []
+    let runningApps = runningApplications()
+    
+    for app in runningApps {
+      if let name = app.localizedName {
+        ids.append(name)
+      }
+      if let bundleId = app.bundleIdentifier {
+        ids.append(bundleId)
+      }
+    }
+    
+    return ids
+  }
+  
+  
+  
+  // MARK: - Recently Launched
+  
   public func recentlyLaunchedAppName() -> String {
     if let name = runningAppNames().last {
       return name
@@ -78,27 +111,9 @@ extension LaunchGuard {
       recentlyLaunched = name
     }
     if let bundleId = runningBundleIds().last {
-      recentlyLaunched.append(": \(bundleId)")
+      recentlyLaunched.append(" [\(bundleId)]")
     }
     return recentlyLaunched
-  }
-  
-  
-  
-  public func runningAppNamesAndBundleIds() -> [String] {
-    var ids: [String] = []
-    let runningApps = runningApplications()
-    
-    for app in runningApps {
-      if let name = app.localizedName {
-        ids.append(name)
-      }
-      if let bundleId = app.bundleIdentifier {
-        ids.append(bundleId)
-      }
-    }
-    
-    return ids
   }
   
 }

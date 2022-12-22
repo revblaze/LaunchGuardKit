@@ -14,13 +14,11 @@ class ViewController: NSViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
 
-    print(launchGuard.runningBundleIds())
-  }
-
-  override var representedObject: Any? {
-    didSet {
-    // Update the view, if already loaded.
-    }
+    // Enable debug logging
+    LaunchGuard.debug = true
+    
+    let blocklist = ["org.m0k.transmission"]
+    launchGuard.addBlocklist(blocklist)
   }
 
 
