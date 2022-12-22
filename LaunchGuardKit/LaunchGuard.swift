@@ -10,7 +10,7 @@ import AppKit
 open class LaunchGuard: NSObject {
   
   static let shared = LaunchGuard()
-  
+
   static var debug = false
   
   fileprivate let workspace = NSWorkspace.shared
@@ -19,9 +19,7 @@ open class LaunchGuard: NSObject {
   static let ApplicationDidLaunchNotification = NSNotification.Name("LGApplicationDidLaunchNotification")
   
   public override init() {
-    // pre var setup
     super.init()
-    // notifs & other post-init
     notificationCenter.addObserver(self,
                                    selector: #selector(self.newRunningApplicationDidLaunch(_:)),
                                    name: NSWorkspace.didLaunchApplicationNotification,
@@ -32,7 +30,7 @@ open class LaunchGuard: NSObject {
 
 extension LaunchGuard {
   
-  @objc func newRunningApplicationDidLaunch(_ notification: Notification) {
+  @objc private func newRunningApplicationDidLaunch(_ notification: Notification) {
     let app: NSRunningApplication = notification.userInfo![NSWorkspace.applicationUserInfoKey] as! NSRunningApplication
     if let name = app.localizedName {
       if let bundleId = app.bundleIdentifier {
@@ -50,11 +48,6 @@ extension LaunchGuard {
   public func runningApplications() -> [NSRunningApplication] {
     return workspace.runningApplications
   }
-  
-  
-  
-  // MARK: - Recently Launched
-  
   
   
 }

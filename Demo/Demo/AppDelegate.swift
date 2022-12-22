@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  DaemonTest
+//  Demo
 //
-//  Created by Justin Bush on 11/15/22.
+//  Created by Justin Bush on 12/22/22.
 //
 
 import Cocoa
@@ -24,7 +24,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
   func applicationSupportsSecureRestorableState(_ app: NSApplication) -> Bool {
     return true
   }
-  
 
 
 }
