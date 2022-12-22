@@ -19,8 +19,12 @@ extension LaunchGuard {
       bundleId = bundleIdentifier
     }
     switch command {
-    case .quit: app.terminate(); Debug.log("[QUIT] \(bundleId)")
-    case .forceQuit: app.forceTerminate(); Debug.log("[FORCE QUIT] \(bundleId)")
+    case .quit:
+      app.terminate()
+      Debug.log("[QUIT] \(bundleId)")
+    case .forceQuit:
+      app.forceTerminate()
+      Debug.log("[FORCE QUIT] \(bundleId)")
     }
   }
   
