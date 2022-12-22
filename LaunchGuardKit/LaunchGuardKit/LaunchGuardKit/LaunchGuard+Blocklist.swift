@@ -16,7 +16,7 @@ extension LaunchGuard {
   
   func filterBlocklist() {
     if Blocklist.appNames != [] {
-      
+      commandAll(.forceQuit, appNames: Blocklist.appNames)
     }
     if Blocklist.bundleIds != [] {
       commandAll(.forceQuit, bundleIds: Blocklist.bundleIds)
@@ -29,6 +29,11 @@ extension LaunchGuard {
     }
     // check currently running apps too
     commandAll(.forceQuit, bundleIds: bundleIds)
+  }
+  
+  public func clearBlocklist() {
+    Blocklist.appNames = []
+    Blocklist.bundleIds = []
   }
   
 }
