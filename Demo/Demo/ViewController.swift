@@ -13,7 +13,7 @@ class ViewController: NSViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-
+    
     let blocklist = ["com.apple.Music"]
     launchGuard.add(blocklist: blocklist)
     
