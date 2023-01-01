@@ -20,6 +20,11 @@ func viewDidLoad() {
   launchGuard.apps()            // ["App 1", "com.bundle.app1", "App 2", "com.bundle.app2", ...]
   launchGuard.apps(.name)       // ["App 1", "App 2", ...]
   launchGuard.apps(.bundleId)   // ["com.bundle.app1", "com.bundle.app2", ...]
+  
+  // Get currently running apps (alternate)
+  launchGuard.running()            // ["App 1", "com.bundle.app1", "App 2", "com.bundle.app2", ...]
+  launchGuard.running(.name)       // ["App 1", "App 2", ...]
+  launchGuard.running(.bundleId)   // ["com.bundle.app1", "com.bundle.app2", ...]
 }
 ```
 
